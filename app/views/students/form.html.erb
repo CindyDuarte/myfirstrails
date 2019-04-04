@@ -1,0 +1,7 @@
+<%= form_for @student do |f| %>
+  nombre: <%= f.text_field :nombre %><br />
+  apellido: <%= f.text_field :apellido %><br />
+  edad: <%= f.number_field :edad %><br />
+  correo: <%= f.text_field :correo %><br />
+  <%= f.submit %>
+<% end %>

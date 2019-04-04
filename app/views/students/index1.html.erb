@@ -1,0 +1,20 @@
+<h1>Holaaaa Maker!!</h1>
+
+<a href="/students/new">Crear un nuevo estudiante<a>
+<br/>
+<p>Los estudiantes son: </p>
+<ul>    
+        <% @students.each do |student| %>
+        <li>
+            <%=link_to "editar", edit_student_path(student)%>
+            <a href="/students/<%=student.id%>"><%=student.nombre%><a> 
+            <a href="/students/<%=student.id%>/edit">Editar Estudiante<a> 
+
+<%= form_for student, :method => :delete do |f| %>
+  
+  <%= f.submit %>
+<% end %>
+
+        </li>
+        <% end %>    
+</ul>
